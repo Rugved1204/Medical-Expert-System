@@ -1,0 +1,9 @@
+Time: 2025-04-11_21-10-22
+Symptoms: itching, itchy eyes, itchy skin
+Diagnosis: Most likely: Allergic Rhinitis (33% match)
+Other possibilities:
+- Conjunctivitis (33% match)
+- Psoriasis (33% match)
+- Chickenpox (25% match)
+
+

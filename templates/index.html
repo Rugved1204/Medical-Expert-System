@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Medical Expert System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:#5ab5e7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color:rgb(211, 8, 55);
+        }
+        .symptom-list {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background:hsl(204, 73.00%, 65.10%);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .result {
+            background:rgba(89, 162, 181, 0.7);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Medical Expert System</h1>
+        <form method="POST">
+            <p>Select your symptoms:</p>
+            <div class="symptom-list">
+                {% for symptom in symptoms %}
+                    <label><input type="checkbox" name="symptoms" value="{{ symptom }}"> {{ symptom }}</label>
+                {% endfor %}
+            </div>
+            <button type="submit">Diagnose</button>
+        </form>
+
+        {% if diagnosis %}
+            <div class="result">
+                <strong>Diagnosis:</strong><br>
+                {{ diagnosis | safe }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
