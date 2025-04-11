@@ -65,7 +65,8 @@ http://127.0.0.1:5000
 ## 🧾 Sample Output
 
 
-Most likely: Flu (80% match)
+Most likely:
+- Flu (80% match)
 Other possibilities:
 - COVID-19 (60% match)
 - Common Cold (40% match)
